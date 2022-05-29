@@ -63,4 +63,14 @@ FROM movies
 WHERE budget < 10000000
 
 
+-- Q.5 What 10 actors have been in the most number of movies, and how many movies have they each been in?
+
+SELECT name,
+COUNT(1) AS number_of_roles
+FROM actor_credits
+GROUP BY 1
+-- ORDER BY must come after GROUP BY, there is an order of calls
+ORDER BY 2 DESC
+LIMIT 10
+
 
