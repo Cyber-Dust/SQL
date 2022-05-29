@@ -73,4 +73,14 @@ GROUP BY 1
 ORDER BY 2 DESC
 LIMIT 10
 
+-- Q.6 In each genre, what are the largest and smallest budgets any movie had, ordered by the largest budget?
+
+SELECT genre,
+-- min goes first, make sure to include comma
+MIN(budget) AS smallest_budget,
+MAX(budget) AS biggest_budget
+FROM movies
+GROUP BY 1
+-- use the name of the max budget to order in descending order
+ORDER BY biggest_budget DESC
 
