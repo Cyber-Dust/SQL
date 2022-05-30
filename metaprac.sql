@@ -77,6 +77,7 @@ LIMIT 10
 
 SELECT genre,
 -- min goes first, make sure to include comma
+-- remember, budget is an INT datatype
 MIN(budget) AS smallest_budget,
 MAX(budget) AS biggest_budget
 FROM movies
