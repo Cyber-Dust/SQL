@@ -85,3 +85,12 @@ GROUP BY 1
 -- use the name of the max budget to order in descending order
 ORDER BY biggest_budget DESC
 
+
+-- Q.7 What % of movies have a female lead actor?
+
+SELECT 
+-- To calculate %, x100 and divide by the count of the desired table
+SUM(IF(gender = 'F', 1, 0)) * 100.0 / COUNT(1) AS perc_female
+FROM actor_credits
+WHERE role = 'lead'
+
