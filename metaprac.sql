@@ -94,3 +94,13 @@ SUM(IF(gender = 'F', 1, 0)) * 100.0 / COUNT(1) AS perc_female
 FROM actor_credits
 WHERE role = 'lead'
 
+
+-- Q.8 What are the average profits (revenue - budget) of movies with either Robert Downey Jr. or Scarlett Johansson in them?
+
+-- Profit = revenue - budget
+
+SELECT 
+AVG(movies.revenue - movies.budget) AS avg_profit
+FROM movies
+INNER JOIN ()
+
