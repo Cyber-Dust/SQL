@@ -95,12 +95,20 @@ FROM actor_credits
 WHERE role = 'lead'
 
 
+
 -- Q.8 What are the average profits (revenue - budget) of movies with either Robert Downey Jr. or Scarlett Johansson in them?
 
 -- Profit = revenue - budget
 
 SELECT 
-AVG(movies.revenue - movies.budget) AS avg_profit
+-- You have to snakecase '_' or SQL will error
+AVG(movies.revenue - movies.budget) AS Average_Profit
 FROM movies
-INNER JOIN ()
+INNER JOIN (
+  SELECT movie_id 
+  FROM actor_credits
+  WHERE name IN ('Scarlett Johansson', 'Robert Downey Jr.')
+  GROUP BY 1
+)a
+ON movies.movie_id = a.movie_id
 
