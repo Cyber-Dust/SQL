@@ -112,3 +112,13 @@ INNER JOIN (
 )a
 ON movies.movie_id = a.movie_id
 
+
+--  9.  Do male or female directors tend to make longer movies on average?
+
+SELECT director_credits.gender,
+AVG(runtime) AS avg_runtime
+FROM movies
+INNER JOIN director_credits
+ON movies.movie_id = director_credits.movie_id
+GROUP BY 1
+
