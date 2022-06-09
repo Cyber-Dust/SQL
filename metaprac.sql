@@ -122,3 +122,11 @@ INNER JOIN director_credits
 ON movies.movie_id = director_credits.movie_id
 GROUP BY 1
 
+-- A.
+-- +--------+-------------+
+-- | gender | avg_runtime |
+-- +--------+-------------+
+-- | M      |    111.2166 |
+-- | F      |    108.2500 |
+-- +--------+-------------+
+
