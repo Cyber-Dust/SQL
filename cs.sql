@@ -21,3 +21,12 @@ JOINS: JOIN, LEFT/RIGHT JOIN, FULL JOIN
   
 UNIONS: UNION (this one is distinct), UNION ALL
   e.g. SELECT id, name FROM Table_A UNION SELECT id, name FROM Table_B
+
+Create / Delete Databases
+Create / Delete Table(s) in a database
+SELECT particular data from table(s)
+INSERT data into tables
+UPDATE data in tables
+DELETE data from tables
+Create Views in the database
+Execute various aggregate functions
