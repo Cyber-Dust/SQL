@@ -112,6 +112,13 @@ INNER JOIN (
 )a
 ON movies.movie_id = a.movie_id
 
+-- A.
+-- +----------------+
+-- | Average_Profit |
+-- +----------------+
+-- | 476223712.5714 |
+-- +----------------+
+
 
 --  9.  Do male or female directors tend to make longer movies on average?
 
