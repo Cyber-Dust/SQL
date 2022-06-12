@@ -137,3 +137,9 @@ GROUP BY 1
 -- | F      |    108.2500 |
 -- +--------+-------------+
 
+-- Q10. What are all the movies that made 4x more revenue than the average movie in the same genre released in the same year?
+
+SELECT name
+from movies
+LIMIT 5
+
