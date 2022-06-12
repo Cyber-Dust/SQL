@@ -141,5 +141,11 @@ GROUP BY 1
 
 SELECT name
 from movies
+INNER JOIN (
+SELECT release_year,
+genre,
+AVG(revenue) AS avg_rev
+FROM movies
+GROUP BY 1,2) AS avg_revs
 LIMIT 5
 
