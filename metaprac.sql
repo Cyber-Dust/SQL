@@ -149,3 +149,20 @@ FROM movies
 GROUP BY 1,2) AS avg_revs
 LIMIT 5
 
+-- A.
+-- +--------------------------------+
+-- | name                           |
+-- +--------------------------------+
+-- | Shrek Forever After            |
+-- | Inception                      |
+-- | Skyfall                        |
+-- | Transformers: Dark of the Moon |
+-- | The Kings Speech               |
+-- | The Dark Knight Rises          |
+-- | The Great Gatsby               |
+-- | Iron Man 3                     |
+-- | Ted                            |
+-- | Noah                           |
+-- | Inside Out                     |
+-- | Captain America: Civil War     |
+-- +--------------------------------+
