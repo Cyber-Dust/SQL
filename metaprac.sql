@@ -166,3 +166,20 @@ LIMIT 5
 -- | Inside Out                     |
 -- | Captain America: Civil War     |
 -- +--------------------------------+
+
+
+-- 11.  For each horror film with a rating of at least 6.5, what percent of their supporting cast are men?
+ 
+SELECT
+m.name,
+SUM(IF(a.gender = 'M', 1, 0)) * 100.0 / COUNT(1) AS perc_male
+FROM movies m
+INNER JOIN actor_credits a
+ON m.movie_id = a.movie_id
+WHERE
+m.genre = 'horror'
+AND m.rating >= 6.5
+AND a.role = 'supporting'
+GROUP BY 1
+ 
+
