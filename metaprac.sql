@@ -182,4 +182,20 @@ AND m.rating >= 6.5
 AND a.role = 'supporting'
 GROUP BY 1
  
+12.  What actor-director pair have made the most number of commercially successful (profit > 0) movies together?
+SELECT
+a.name AS actor,
+d.name AS director,
+COUNT(1) AS num_movies
+FROM movies m
+INNER JOIN actor_credits a
+ON m.movie_id = a.movie_id
+INNER JOIN director_credits d
+ON m.movie_id = d.movie_id
+WHERE m.revenue - m.budget > 0
+GROUP BY 1,2
+ORDER BY 3 DESC
+LIMIT 1
+ 
+
 
