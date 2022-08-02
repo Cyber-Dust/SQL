@@ -183,6 +183,7 @@ AND a.role = 'supporting'
 GROUP BY 1
  
 -- 12.  What actor-director pair have made the most number of commercially successful (profit > 0) movies together?
+
 SELECT
 a.name AS actor,
 d.name AS director,
