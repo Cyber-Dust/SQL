@@ -232,3 +232,69 @@ FROM daily_content
  
 
 
++---------------------------+        +-------------------------------+
+|      student              |        |  enrollment                   |
+|-------------|-------------+        |-------------------|-----------+
+|  studentid  | int         |        |   studentid       | int       |
+|  name       | varchar(255)|        | courseid          | int       |
+|  age        | int         |        | enrollmentyear    | int       |
+|  gender     | varchar(20) |        | enrollmentquarter | varcahr(2)|
+|  state      | varchar(2)  |        | iscompleted       | boolean   |
++-------------+-------------+        | finalgrade        | varchar(2)|
+                                     +-------------------------------+
+                                          ^
+                                          |
+                                          |
++----------------------------+      +----------------------------+
+|      professor             |      |       course               |
+|--------------|-------------+      |-------------|--------------|
+|  professorid | int         |      | courseid    | int          |
+|  name        | varchar(255)| ---> | professorid | int          |
+|  state       | varchar(2)  |      | coursename  | varchar(100) |     
+|  gender      | varchar(20) |      | credits     |int           |            
+|istenured     | boolean     |      +-------------+--------------+        
++----------------------------+
+
+
+
+
+
+
+Using above schema, get the number of students enrolled for courses by year sorted by year ascending.
+
+SELECT COUNT(student_id) AS num_of_students, enrollmentyear AS year
+FROM students
+JOIN enrollment ON student.studentid = enrollment.studentid 
+GROUP BY enrollmentyear
+ORDER BY enrollmentyear ASC
+
+
+
+SELECT
+FROM 
+JOIN
+WHERE
+GROUP BY 
+
+
+
+__________
+
+Write a function that returns the most common character from a given string! 
+an example of input -- "appleeepp"
+def f(input): 
+  most_common_letter = ''
+  number_of_times=0 
+  letters_seen = {} 
+
+  for x in input: 
+    if x in letters_seen.keys(): // is key in dictionary ? 
+      letters_seen[x]+=1
+      
+    else: // key wasn't in dictionary, add it to dictionary. We've never seen it 
+      letters_seen[x]=1
+
+    if letters_seen[x]>number_of_times: 
+      most_common_letter=x
+
+  return most_common_letter
