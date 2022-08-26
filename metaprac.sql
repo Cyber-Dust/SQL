@@ -197,6 +197,47 @@ WHERE m.revenue - m.budget > 0
 GROUP BY 1,2
 ORDER BY 3 DESC
 LIMIT 1
+
+
+
+When you know what language you'd like to use for your interview,
+simply choose it from the dropdown in the top bar.
+
+You can also change the default language your pads are created with
+in your account settings: https://app.coderpad.io/settings
+
+Enjoy your interview!
+
+daily_content
+date       | userid | content_id | timestamp  | content_type | target_id
+2020-01-01 | 1      | 101        | 1503814659 | photo        | null
+2020-01-01 | 2      | 102        | 1503815817 | comment      | 101
+2020-01-01 | 3      | 103        | 1503818238 | share        | null
+2020-01-01 | 4      | 104        | 1503820134 | status       | null
+2020-01-01 | 4      | 105        | 1503823129 | comment      | 101
+2020-01-01 | 5      | 106        | 1503834921 | comment      | 104
+
+How many people have published a post today, broken down by content type?
+
+SELECT COUNT (DISTINCT(userid)) AS number_of_users,
+content_type
+FROM daily_content
+GROUP BY content_type
+WHERE content_type <> 'comment'
+AND date = 2020-01-01
+
+Can you generate a distribution of comments per photo post? or in other words, how many photo posts had 1 comment, how many had 2, and so on?
+
+id, comment_count
+101, 1
+102, 3
+103, 4
+
+
+
+SELECT COUNT(comment), conent_id 
+FROM daily_content
+
  
 
 
