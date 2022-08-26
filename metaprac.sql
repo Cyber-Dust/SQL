@@ -199,15 +199,6 @@ ORDER BY 3 DESC
 LIMIT 1
 
 
-
-When you know what language you'd like to use for your interview,
-simply choose it from the dropdown in the top bar.
-
-You can also change the default language your pads are created with
-in your account settings: https://app.coderpad.io/settings
-
-Enjoy your interview!
-
 daily_content
 date       | userid | content_id | timestamp  | content_type | target_id
 2020-01-01 | 1      | 101        | 1503814659 | photo        | null
