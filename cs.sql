@@ -42,3 +42,9 @@ ALTER TABLE - modifies a table
 DROP TABLE - deletes a table
 CREATE INDEX - creates an index (search key)
 DROP INDEX - deletes an index
+
+-- How to list all character that BEGIN with a certain letter
+SELECT
+  first_name
+FROM patients
+where first_name LIKE 'c%';
