@@ -62,3 +62,7 @@ update patients
 set allergies = 'NKA'
 WHERE allergies
 IS null;
+
+-- use SELECT CONCAT to concatanate
+SELECT concat (first_name,' ',last_name) as fullname
+from patients;
