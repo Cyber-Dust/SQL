@@ -56,3 +56,9 @@ SELECT
   last_name
 FROM patients
 where weight between 100 and 120;
+
+-- Update a dataset
+update patients
+set allergies = 'NKA'
+WHERE allergies
+IS null;
