@@ -48,3 +48,11 @@ SELECT
   first_name
 FROM patients
 where first_name LIKE 'c%';
+
+
+-- selecting data between x amount of numerical value
+SELECT
+  first_name,
+  last_name
+FROM patients
+where weight between 100 and 120;
