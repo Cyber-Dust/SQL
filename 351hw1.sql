@@ -1,4 +1,4 @@
-beers-tables.database
+
 
 SELLS
 +------------+------------+-------+
