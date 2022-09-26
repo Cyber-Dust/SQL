@@ -55,46 +55,25 @@ select * from employees where first_name like '%mary%' and last_name like '%o_';
 -- +--------+------------+------------+----------------+--------+------------+
 --Q.7
 select first_name, last_name from employees join salaries on employees.emp_no = salaries.emp_no where salaries.salary >= 150000;
--- +------------+-----------+
--- | first_name | last_name |
--- +------------+-----------+
--- | Tokuyasu   | Pesch     |
--- | Tokuyasu   | Pesch     |
--- | Tokuyasu   | Pesch     |
--- | Tokuyasu   | Pesch     |
--- | Tokuyasu   | Pesch     |
--- | Ibibia     | Junet     |
--- | Xiahua     | Whitcomb  |
--- | Xiahua     | Whitcomb  |
--- | Lansing    | Kambil    |
--- | Willard    | Baca      |
--- | Willard    | Baca      |
--- | Tsutomu    | Alameldin |
--- | Tsutomu    | Alameldin |
--- | Tsutomu    | Alameldin |
--- | Tsutomu    | Alameldin |
--- | Tsutomu    | Alameldin |
--- | Charmane   | Griswold  |
--- | Charmane   | Griswold  |
--- | Weicheng   | Hatcliff  |
--- | Weicheng   | Hatcliff  |
--- | Mitsuyuki  | Stanfel   |
--- | Sanjai     | Luders    |
--- | Sanjai     | Luders    |
--- | Sanjai     | Luders    |
--- | Honesty    | Mukaidono |
--- | Honesty    | Mukaidono |
--- | Honesty    | Mukaidono |
--- | Weijing    | Chenoweth |
--- | Weijing    | Chenoweth |
--- | Shin       | Birdsall  |
--- | Shin       | Birdsall  |
--- | Mohammed   | Moehrke   |
--- | Lidong     | Meriste   |
--- | Lidong     | Meriste   |
--- | Lidong     | Meriste   |
--- | Lidong     | Meriste   |
--- +------------+-----------+
++------------+-----------+
+| first_name | last_name |
++------------+-----------+
+| Tokuyasu   | Pesch     |
+| Ibibia     | Junet     |
+| Xiahua     | Whitcomb  |
+| Lansing    | Kambil    |
+| Willard    | Baca      |
+| Tsutomu    | Alameldin |
+| Charmane   | Griswold  |
+| Weicheng   | Hatcliff  |
+| Mitsuyuki  | Stanfel   |
+| Sanjai     | Luders    |
+| Honesty    | Mukaidono |
+| Weijing    | Chenoweth |
+| Shin       | Birdsall  |
+| Mohammed   | Moehrke   |
+| Lidong     | Meriste   |
++------------+-----------+
 --Q.8
 select departments.dept_no, count(emp_no) as number_of_employees from dept_emp join departments on dept_emp.dept_no = departments.dept_no where from_date like '1988-10-20' group by dept_no order by count(emp_no) desc;
 -- +---------+---------------------+
